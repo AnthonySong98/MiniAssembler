@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.10)
+project(Assembler)
+
+set(CMAKE_CXX_STANDARD 11)
+
+add_executable(Assembler main.cpp predefined_data_structures/asm_COL.h predefined_data_structures/asm_COL.cpp predefined_data_structures/machine_code_COL.cpp predefined_data_structures/machine_code_COL.h predefined_data_structures/symbol_table.cpp predefined_data_structures/symbol_table.h converter_set/abstract_converter.h converter_set/abstract_converter.cpp converter_set/add_inst_converter.h)
