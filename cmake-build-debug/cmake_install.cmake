@@ -1,4 +1,4 @@
-# Install script for directory: /Users/mac/Desktop/计算机综合课程设计/Assembler
+# Install script for directory: /Users/mac/Desktop/computer integrated system design/Assembler
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/mac/Desktop/计算机综合课程设计/Assembler/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/mac/Desktop/computer integrated system design/Assembler/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

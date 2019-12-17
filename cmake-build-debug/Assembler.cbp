@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/mac/Desktop/计算机综合课程设计/Assembler/cmake-build-debug"/>
+				<Option working_dir="/Users/mac/Desktop/computer integrated system design/Assembler/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/mac/Desktop/计算机综合课程设计/Assembler/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/mac/Desktop/计算机综合课程设计/Assembler/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/mac/Desktop/计算机综合课程设计/Assembler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/mac/Desktop/计算机综合课程设计/Assembler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/mac/Desktop/computer\ integrated\ system\ design/Assembler/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/mac/Desktop/computer\ integrated\ system\ design/Assembler/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/mac/Desktop/computer\ integrated\ system\ design/Assembler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/mac/Desktop/computer\ integrated\ system\ design/Assembler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/mac/Desktop/计算机综合课程设计/Assembler/cmake-build-debug"/>
+				<Option working_dir="/Users/mac/Desktop/computer integrated system design/Assembler/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/mac/Desktop/计算机综合课程设计/Assembler/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/mac/Desktop/计算机综合课程设计/Assembler/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/mac/Desktop/计算机综合课程设计/Assembler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/mac/Desktop/计算机综合课程设计/Assembler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/mac/Desktop/computer\ integrated\ system\ design/Assembler/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/mac/Desktop/computer\ integrated\ system\ design/Assembler/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/mac/Desktop/computer\ integrated\ system\ design/Assembler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/mac/Desktop/computer\ integrated\ system\ design/Assembler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/mac/Desktop/计算机综合课程设计/Assembler/cmake-build-debug"/>
+				<Option working_dir="/Users/mac/Desktop/computer integrated system design/Assembler/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/mac/Desktop/计算机综合课程设计/Assembler/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/mac/Desktop/计算机综合课程设计/Assembler/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/mac/Desktop/计算机综合课程设计/Assembler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/mac/Desktop/计算机综合课程设计/Assembler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/mac/Desktop/computer\ integrated\ system\ design/Assembler/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/mac/Desktop/computer\ integrated\ system\ design/Assembler/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/mac/Desktop/computer\ integrated\ system\ design/Assembler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/mac/Desktop/computer\ integrated\ system\ design/Assembler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Assembler">
-				<Option output="/Users/mac/Desktop/计算机综合课程设计/Assembler/cmake-build-debug/Assembler" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/mac/Desktop/计算机综合课程设计/Assembler/cmake-build-debug"/>
+				<Option output="/Users/mac/Desktop/computer integrated system design/Assembler/cmake-build-debug/Assembler" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mac/Desktop/computer integrated system design/Assembler/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -53,15 +53,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/mac/Desktop/计算机综合课程设计/Assembler/cmake-build-debug/Makefile&quot;  VERBOSE=1 Assembler"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/mac/Desktop/计算机综合课程设计/Assembler/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/mac/Desktop/计算机综合课程设计/Assembler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/mac/Desktop/计算机综合课程设计/Assembler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/mac/Desktop/computer\ integrated\ system\ design/Assembler/cmake-build-debug/Makefile&quot;  VERBOSE=1 Assembler"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/mac/Desktop/computer\ integrated\ system\ design/Assembler/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/mac/Desktop/computer\ integrated\ system\ design/Assembler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/mac/Desktop/computer\ integrated\ system\ design/Assembler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Assembler/fast">
-				<Option output="/Users/mac/Desktop/计算机综合课程设计/Assembler/cmake-build-debug/Assembler" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/mac/Desktop/计算机综合课程设计/Assembler/cmake-build-debug"/>
+				<Option output="/Users/mac/Desktop/computer integrated system design/Assembler/cmake-build-debug/Assembler" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mac/Desktop/computer integrated system design/Assembler/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -75,44 +75,50 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/mac/Desktop/计算机综合课程设计/Assembler/cmake-build-debug/Makefile&quot;  VERBOSE=1 Assembler/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/mac/Desktop/计算机综合课程设计/Assembler/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/mac/Desktop/计算机综合课程设计/Assembler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/mac/Desktop/计算机综合课程设计/Assembler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/mac/Desktop/computer\ integrated\ system\ design/Assembler/cmake-build-debug/Makefile&quot;  VERBOSE=1 Assembler/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/mac/Desktop/computer\ integrated\ system\ design/Assembler/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/mac/Desktop/computer\ integrated\ system\ design/Assembler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/mac/Desktop/computer\ integrated\ system\ design/Assembler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/mac/Desktop/计算机综合课程设计/Assembler/converter_set/abstract_converter.cpp">
+		<Unit filename="/Users/mac/Desktop/computer integrated system design/Assembler/assembler.cpp">
 			<Option target="Assembler"/>
 		</Unit>
-		<Unit filename="/Users/mac/Desktop/计算机综合课程设计/Assembler/converter_set/abstract_converter.h">
+		<Unit filename="/Users/mac/Desktop/computer integrated system design/Assembler/assembler.h">
 			<Option target="Assembler"/>
 		</Unit>
-		<Unit filename="/Users/mac/Desktop/计算机综合课程设计/Assembler/converter_set/add_inst_converter.h">
+		<Unit filename="/Users/mac/Desktop/computer integrated system design/Assembler/converter_set/abstract_converter.cpp">
 			<Option target="Assembler"/>
 		</Unit>
-		<Unit filename="/Users/mac/Desktop/计算机综合课程设计/Assembler/main.cpp">
+		<Unit filename="/Users/mac/Desktop/computer integrated system design/Assembler/converter_set/abstract_converter.h">
 			<Option target="Assembler"/>
 		</Unit>
-		<Unit filename="/Users/mac/Desktop/计算机综合课程设计/Assembler/predefined_data_structures/asm_COL.cpp">
+		<Unit filename="/Users/mac/Desktop/computer integrated system design/Assembler/converter_set/add_inst_converter.h">
 			<Option target="Assembler"/>
 		</Unit>
-		<Unit filename="/Users/mac/Desktop/计算机综合课程设计/Assembler/predefined_data_structures/asm_COL.h">
+		<Unit filename="/Users/mac/Desktop/computer integrated system design/Assembler/main.cpp">
 			<Option target="Assembler"/>
 		</Unit>
-		<Unit filename="/Users/mac/Desktop/计算机综合课程设计/Assembler/predefined_data_structures/machine_code_COL.cpp">
+		<Unit filename="/Users/mac/Desktop/computer integrated system design/Assembler/predefined_data_structures/asm_COL.cpp">
 			<Option target="Assembler"/>
 		</Unit>
-		<Unit filename="/Users/mac/Desktop/计算机综合课程设计/Assembler/predefined_data_structures/machine_code_COL.h">
+		<Unit filename="/Users/mac/Desktop/computer integrated system design/Assembler/predefined_data_structures/asm_COL.h">
 			<Option target="Assembler"/>
 		</Unit>
-		<Unit filename="/Users/mac/Desktop/计算机综合课程设计/Assembler/predefined_data_structures/symbol_table.cpp">
+		<Unit filename="/Users/mac/Desktop/computer integrated system design/Assembler/predefined_data_structures/machine_code_COL.cpp">
 			<Option target="Assembler"/>
 		</Unit>
-		<Unit filename="/Users/mac/Desktop/计算机综合课程设计/Assembler/predefined_data_structures/symbol_table.h">
+		<Unit filename="/Users/mac/Desktop/computer integrated system design/Assembler/predefined_data_structures/machine_code_COL.h">
 			<Option target="Assembler"/>
 		</Unit>
-		<Unit filename="/Users/mac/Desktop/计算机综合课程设计/Assembler/CMakeLists.txt">
+		<Unit filename="/Users/mac/Desktop/computer integrated system design/Assembler/predefined_data_structures/symbol_table.cpp">
+			<Option target="Assembler"/>
+		</Unit>
+		<Unit filename="/Users/mac/Desktop/computer integrated system design/Assembler/predefined_data_structures/symbol_table.h">
+			<Option target="Assembler"/>
+		</Unit>
+		<Unit filename="/Users/mac/Desktop/computer integrated system design/Assembler/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

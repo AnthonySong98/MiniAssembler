@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/mac/Desktop/计算机综合课程设计/Assembler
+CMAKE_SOURCE_DIR = "/Users/mac/Desktop/computer integrated system design/Assembler"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/mac/Desktop/计算机综合课程设计/Assembler/cmake-build-debug
+CMAKE_BINARY_DIR = "/Users/mac/Desktop/computer integrated system design/Assembler/cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mac/Desktop/计算机综合课程设计/Assembler/cmake-build-debug/CMakeFiles /Users/mac/Desktop/计算机综合课程设计/Assembler/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/mac/Desktop/computer integrated system design/Assembler/cmake-build-debug/CMakeFiles" "/Users/mac/Desktop/computer integrated system design/Assembler/cmake-build-debug/CMakeFiles/progress.marks"
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mac/Desktop/计算机综合课程设计/Assembler/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/mac/Desktop/computer integrated system design/Assembler/cmake-build-debug/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -122,6 +122,33 @@ Assembler: cmake_check_build_system
 Assembler/fast:
 	$(MAKE) -f CMakeFiles/Assembler.dir/build.make CMakeFiles/Assembler.dir/build
 .PHONY : Assembler/fast
+
+assembler.o: assembler.cpp.o
+
+.PHONY : assembler.o
+
+# target to build an object file
+assembler.cpp.o:
+	$(MAKE) -f CMakeFiles/Assembler.dir/build.make CMakeFiles/Assembler.dir/assembler.cpp.o
+.PHONY : assembler.cpp.o
+
+assembler.i: assembler.cpp.i
+
+.PHONY : assembler.i
+
+# target to preprocess a source file
+assembler.cpp.i:
+	$(MAKE) -f CMakeFiles/Assembler.dir/build.make CMakeFiles/Assembler.dir/assembler.cpp.i
+.PHONY : assembler.cpp.i
+
+assembler.s: assembler.cpp.s
+
+.PHONY : assembler.s
+
+# target to generate assembly for a file
+assembler.cpp.s:
+	$(MAKE) -f CMakeFiles/Assembler.dir/build.make CMakeFiles/Assembler.dir/assembler.cpp.s
+.PHONY : assembler.cpp.s
 
 converter_set/abstract_converter.o: converter_set/abstract_converter.cpp.o
 
@@ -267,6 +294,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Assembler"
+	@echo "... assembler.o"
+	@echo "... assembler.i"
+	@echo "... assembler.s"
 	@echo "... converter_set/abstract_converter.o"
 	@echo "... converter_set/abstract_converter.i"
 	@echo "... converter_set/abstract_converter.s"
