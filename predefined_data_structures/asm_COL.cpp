@@ -4,26 +4,7 @@
 
 #include "asm_COL.h"
 // TODO: constructor for ASM_COL class
-ASM_COL::ASM_COL(const string &original_line_of_code, int line_number) : original_line_of_code(original_line_of_code),
-                                                                         line_number(line_number) {
-
-}
-
-const string &ASM_COL::getOriginal_line_of_code() const {
-    return original_line_of_code;
-}
-
-void ASM_COL::setOriginal_line_of_code(const string &original_line_of_code) {
-    ASM_COL::original_line_of_code = original_line_of_code;
-}
-
-int ASM_COL::getLine_number() const {
-    return line_number;
-}
-
-void ASM_COL::setLine_number(int line_number) {
-    ASM_COL::line_number = line_number;
-}
+ASM_COL::ASM_COL() {}
 
 const string &ASM_COL::getLabel_name() const {
     return label_name;

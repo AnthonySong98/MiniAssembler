@@ -204,6 +204,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/Assembler.dir/build.make CMakeFiles/Assembler.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+predefined_data_structures/abstruct_ASM_COL.o: predefined_data_structures/abstruct_ASM_COL.cpp.o
+
+.PHONY : predefined_data_structures/abstruct_ASM_COL.o
+
+# target to build an object file
+predefined_data_structures/abstruct_ASM_COL.cpp.o:
+	$(MAKE) -f CMakeFiles/Assembler.dir/build.make CMakeFiles/Assembler.dir/predefined_data_structures/abstruct_ASM_COL.cpp.o
+.PHONY : predefined_data_structures/abstruct_ASM_COL.cpp.o
+
+predefined_data_structures/abstruct_ASM_COL.i: predefined_data_structures/abstruct_ASM_COL.cpp.i
+
+.PHONY : predefined_data_structures/abstruct_ASM_COL.i
+
+# target to preprocess a source file
+predefined_data_structures/abstruct_ASM_COL.cpp.i:
+	$(MAKE) -f CMakeFiles/Assembler.dir/build.make CMakeFiles/Assembler.dir/predefined_data_structures/abstruct_ASM_COL.cpp.i
+.PHONY : predefined_data_structures/abstruct_ASM_COL.cpp.i
+
+predefined_data_structures/abstruct_ASM_COL.s: predefined_data_structures/abstruct_ASM_COL.cpp.s
+
+.PHONY : predefined_data_structures/abstruct_ASM_COL.s
+
+# target to generate assembly for a file
+predefined_data_structures/abstruct_ASM_COL.cpp.s:
+	$(MAKE) -f CMakeFiles/Assembler.dir/build.make CMakeFiles/Assembler.dir/predefined_data_structures/abstruct_ASM_COL.cpp.s
+.PHONY : predefined_data_structures/abstruct_ASM_COL.cpp.s
+
 predefined_data_structures/asm_COL.o: predefined_data_structures/asm_COL.cpp.o
 
 .PHONY : predefined_data_structures/asm_COL.o
@@ -230,6 +257,33 @@ predefined_data_structures/asm_COL.s: predefined_data_structures/asm_COL.cpp.s
 predefined_data_structures/asm_COL.cpp.s:
 	$(MAKE) -f CMakeFiles/Assembler.dir/build.make CMakeFiles/Assembler.dir/predefined_data_structures/asm_COL.cpp.s
 .PHONY : predefined_data_structures/asm_COL.cpp.s
+
+predefined_data_structures/data_def_pseudo_inst_COL.o: predefined_data_structures/data_def_pseudo_inst_COL.cpp.o
+
+.PHONY : predefined_data_structures/data_def_pseudo_inst_COL.o
+
+# target to build an object file
+predefined_data_structures/data_def_pseudo_inst_COL.cpp.o:
+	$(MAKE) -f CMakeFiles/Assembler.dir/build.make CMakeFiles/Assembler.dir/predefined_data_structures/data_def_pseudo_inst_COL.cpp.o
+.PHONY : predefined_data_structures/data_def_pseudo_inst_COL.cpp.o
+
+predefined_data_structures/data_def_pseudo_inst_COL.i: predefined_data_structures/data_def_pseudo_inst_COL.cpp.i
+
+.PHONY : predefined_data_structures/data_def_pseudo_inst_COL.i
+
+# target to preprocess a source file
+predefined_data_structures/data_def_pseudo_inst_COL.cpp.i:
+	$(MAKE) -f CMakeFiles/Assembler.dir/build.make CMakeFiles/Assembler.dir/predefined_data_structures/data_def_pseudo_inst_COL.cpp.i
+.PHONY : predefined_data_structures/data_def_pseudo_inst_COL.cpp.i
+
+predefined_data_structures/data_def_pseudo_inst_COL.s: predefined_data_structures/data_def_pseudo_inst_COL.cpp.s
+
+.PHONY : predefined_data_structures/data_def_pseudo_inst_COL.s
+
+# target to generate assembly for a file
+predefined_data_structures/data_def_pseudo_inst_COL.cpp.s:
+	$(MAKE) -f CMakeFiles/Assembler.dir/build.make CMakeFiles/Assembler.dir/predefined_data_structures/data_def_pseudo_inst_COL.cpp.s
+.PHONY : predefined_data_structures/data_def_pseudo_inst_COL.cpp.s
 
 predefined_data_structures/machine_code_COL.o: predefined_data_structures/machine_code_COL.cpp.o
 
@@ -285,6 +339,33 @@ predefined_data_structures/symbol_table.cpp.s:
 	$(MAKE) -f CMakeFiles/Assembler.dir/build.make CMakeFiles/Assembler.dir/predefined_data_structures/symbol_table.cpp.s
 .PHONY : predefined_data_structures/symbol_table.cpp.s
 
+util/string_util/string_util.o: util/string_util/string_util.cpp.o
+
+.PHONY : util/string_util/string_util.o
+
+# target to build an object file
+util/string_util/string_util.cpp.o:
+	$(MAKE) -f CMakeFiles/Assembler.dir/build.make CMakeFiles/Assembler.dir/util/string_util/string_util.cpp.o
+.PHONY : util/string_util/string_util.cpp.o
+
+util/string_util/string_util.i: util/string_util/string_util.cpp.i
+
+.PHONY : util/string_util/string_util.i
+
+# target to preprocess a source file
+util/string_util/string_util.cpp.i:
+	$(MAKE) -f CMakeFiles/Assembler.dir/build.make CMakeFiles/Assembler.dir/util/string_util/string_util.cpp.i
+.PHONY : util/string_util/string_util.cpp.i
+
+util/string_util/string_util.s: util/string_util/string_util.cpp.s
+
+.PHONY : util/string_util/string_util.s
+
+# target to generate assembly for a file
+util/string_util/string_util.cpp.s:
+	$(MAKE) -f CMakeFiles/Assembler.dir/build.make CMakeFiles/Assembler.dir/util/string_util/string_util.cpp.s
+.PHONY : util/string_util/string_util.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -303,15 +384,24 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... predefined_data_structures/abstruct_ASM_COL.o"
+	@echo "... predefined_data_structures/abstruct_ASM_COL.i"
+	@echo "... predefined_data_structures/abstruct_ASM_COL.s"
 	@echo "... predefined_data_structures/asm_COL.o"
 	@echo "... predefined_data_structures/asm_COL.i"
 	@echo "... predefined_data_structures/asm_COL.s"
+	@echo "... predefined_data_structures/data_def_pseudo_inst_COL.o"
+	@echo "... predefined_data_structures/data_def_pseudo_inst_COL.i"
+	@echo "... predefined_data_structures/data_def_pseudo_inst_COL.s"
 	@echo "... predefined_data_structures/machine_code_COL.o"
 	@echo "... predefined_data_structures/machine_code_COL.i"
 	@echo "... predefined_data_structures/machine_code_COL.s"
 	@echo "... predefined_data_structures/symbol_table.o"
 	@echo "... predefined_data_structures/symbol_table.i"
 	@echo "... predefined_data_structures/symbol_table.s"
+	@echo "... util/string_util/string_util.o"
+	@echo "... util/string_util/string_util.i"
+	@echo "... util/string_util/string_util.s"
 .PHONY : help
 
 

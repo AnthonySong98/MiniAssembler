@@ -6,21 +6,17 @@
 #define ASSEMBLER_ASM_COL_H
 
 #include <string>
+#include "abstruct_ASM_COL.h"
+
 using namespace std;
 /*
  * The class is the data structure for each input line of original assembly code.
  */
-class ASM_COL{
+class ASM_COL: public ABSTRUCT_ASM_COL{
 public:
     ASM_COL(const string &original_line_of_code, int line_number);
 
-    const string &getOriginal_line_of_code() const;
-
-    void setOriginal_line_of_code(const string &original_line_of_code);
-
-    int getLine_number() const;
-
-    void setLine_number(int line_number);
+    ASM_COL();
 
     bool isIs_label() const;
 
@@ -55,8 +51,6 @@ public:
     void setThird_operand(const string &third_operand);
 
 private:
-    string original_line_of_code; // line of assembly code in original form.
-    int line_number; // line number
 
     /* 每行汇编代码的格式如下
      * [标号:] 指令助记符 第1操作数 [, 第2操作数 [, 第3操作数]] [# 注释]

@@ -5,6 +5,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/Assembler.dir/predefined_data_structures/symbol_table.cpp.o"
   "CMakeFiles/Assembler.dir/converter_set/abstract_converter.cpp.o"
   "CMakeFiles/Assembler.dir/assembler.cpp.o"
+  "CMakeFiles/Assembler.dir/predefined_data_structures/abstruct_ASM_COL.cpp.o"
+  "CMakeFiles/Assembler.dir/predefined_data_structures/data_def_pseudo_inst_COL.cpp.o"
+  "CMakeFiles/Assembler.dir/util/string_util/string_util.cpp.o"
   "Assembler.pdb"
   "Assembler"
 )

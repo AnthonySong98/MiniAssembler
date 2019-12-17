@@ -201,6 +201,78 @@ CMakeFiles/Assembler.dir/assembler.cpp.o.provides: CMakeFiles/Assembler.dir/asse
 CMakeFiles/Assembler.dir/assembler.cpp.o.provides.build: CMakeFiles/Assembler.dir/assembler.cpp.o
 
 
+CMakeFiles/Assembler.dir/predefined_data_structures/abstruct_ASM_COL.cpp.o: CMakeFiles/Assembler.dir/flags.make
+CMakeFiles/Assembler.dir/predefined_data_structures/abstruct_ASM_COL.cpp.o: ../predefined_data_structures/abstruct_ASM_COL.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/mac/Desktop/computer integrated system design/Assembler/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Assembler.dir/predefined_data_structures/abstruct_ASM_COL.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Assembler.dir/predefined_data_structures/abstruct_ASM_COL.cpp.o -c "/Users/mac/Desktop/computer integrated system design/Assembler/predefined_data_structures/abstruct_ASM_COL.cpp"
+
+CMakeFiles/Assembler.dir/predefined_data_structures/abstruct_ASM_COL.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Assembler.dir/predefined_data_structures/abstruct_ASM_COL.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/mac/Desktop/computer integrated system design/Assembler/predefined_data_structures/abstruct_ASM_COL.cpp" > CMakeFiles/Assembler.dir/predefined_data_structures/abstruct_ASM_COL.cpp.i
+
+CMakeFiles/Assembler.dir/predefined_data_structures/abstruct_ASM_COL.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Assembler.dir/predefined_data_structures/abstruct_ASM_COL.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/mac/Desktop/computer integrated system design/Assembler/predefined_data_structures/abstruct_ASM_COL.cpp" -o CMakeFiles/Assembler.dir/predefined_data_structures/abstruct_ASM_COL.cpp.s
+
+CMakeFiles/Assembler.dir/predefined_data_structures/abstruct_ASM_COL.cpp.o.requires:
+
+.PHONY : CMakeFiles/Assembler.dir/predefined_data_structures/abstruct_ASM_COL.cpp.o.requires
+
+CMakeFiles/Assembler.dir/predefined_data_structures/abstruct_ASM_COL.cpp.o.provides: CMakeFiles/Assembler.dir/predefined_data_structures/abstruct_ASM_COL.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Assembler.dir/build.make CMakeFiles/Assembler.dir/predefined_data_structures/abstruct_ASM_COL.cpp.o.provides.build
+.PHONY : CMakeFiles/Assembler.dir/predefined_data_structures/abstruct_ASM_COL.cpp.o.provides
+
+CMakeFiles/Assembler.dir/predefined_data_structures/abstruct_ASM_COL.cpp.o.provides.build: CMakeFiles/Assembler.dir/predefined_data_structures/abstruct_ASM_COL.cpp.o
+
+
+CMakeFiles/Assembler.dir/predefined_data_structures/data_def_pseudo_inst_COL.cpp.o: CMakeFiles/Assembler.dir/flags.make
+CMakeFiles/Assembler.dir/predefined_data_structures/data_def_pseudo_inst_COL.cpp.o: ../predefined_data_structures/data_def_pseudo_inst_COL.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/mac/Desktop/computer integrated system design/Assembler/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Assembler.dir/predefined_data_structures/data_def_pseudo_inst_COL.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Assembler.dir/predefined_data_structures/data_def_pseudo_inst_COL.cpp.o -c "/Users/mac/Desktop/computer integrated system design/Assembler/predefined_data_structures/data_def_pseudo_inst_COL.cpp"
+
+CMakeFiles/Assembler.dir/predefined_data_structures/data_def_pseudo_inst_COL.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Assembler.dir/predefined_data_structures/data_def_pseudo_inst_COL.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/mac/Desktop/computer integrated system design/Assembler/predefined_data_structures/data_def_pseudo_inst_COL.cpp" > CMakeFiles/Assembler.dir/predefined_data_structures/data_def_pseudo_inst_COL.cpp.i
+
+CMakeFiles/Assembler.dir/predefined_data_structures/data_def_pseudo_inst_COL.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Assembler.dir/predefined_data_structures/data_def_pseudo_inst_COL.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/mac/Desktop/computer integrated system design/Assembler/predefined_data_structures/data_def_pseudo_inst_COL.cpp" -o CMakeFiles/Assembler.dir/predefined_data_structures/data_def_pseudo_inst_COL.cpp.s
+
+CMakeFiles/Assembler.dir/predefined_data_structures/data_def_pseudo_inst_COL.cpp.o.requires:
+
+.PHONY : CMakeFiles/Assembler.dir/predefined_data_structures/data_def_pseudo_inst_COL.cpp.o.requires
+
+CMakeFiles/Assembler.dir/predefined_data_structures/data_def_pseudo_inst_COL.cpp.o.provides: CMakeFiles/Assembler.dir/predefined_data_structures/data_def_pseudo_inst_COL.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Assembler.dir/build.make CMakeFiles/Assembler.dir/predefined_data_structures/data_def_pseudo_inst_COL.cpp.o.provides.build
+.PHONY : CMakeFiles/Assembler.dir/predefined_data_structures/data_def_pseudo_inst_COL.cpp.o.provides
+
+CMakeFiles/Assembler.dir/predefined_data_structures/data_def_pseudo_inst_COL.cpp.o.provides.build: CMakeFiles/Assembler.dir/predefined_data_structures/data_def_pseudo_inst_COL.cpp.o
+
+
+CMakeFiles/Assembler.dir/util/string_util/string_util.cpp.o: CMakeFiles/Assembler.dir/flags.make
+CMakeFiles/Assembler.dir/util/string_util/string_util.cpp.o: ../util/string_util/string_util.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/mac/Desktop/computer integrated system design/Assembler/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Assembler.dir/util/string_util/string_util.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Assembler.dir/util/string_util/string_util.cpp.o -c "/Users/mac/Desktop/computer integrated system design/Assembler/util/string_util/string_util.cpp"
+
+CMakeFiles/Assembler.dir/util/string_util/string_util.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Assembler.dir/util/string_util/string_util.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/mac/Desktop/computer integrated system design/Assembler/util/string_util/string_util.cpp" > CMakeFiles/Assembler.dir/util/string_util/string_util.cpp.i
+
+CMakeFiles/Assembler.dir/util/string_util/string_util.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Assembler.dir/util/string_util/string_util.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/mac/Desktop/computer integrated system design/Assembler/util/string_util/string_util.cpp" -o CMakeFiles/Assembler.dir/util/string_util/string_util.cpp.s
+
+CMakeFiles/Assembler.dir/util/string_util/string_util.cpp.o.requires:
+
+.PHONY : CMakeFiles/Assembler.dir/util/string_util/string_util.cpp.o.requires
+
+CMakeFiles/Assembler.dir/util/string_util/string_util.cpp.o.provides: CMakeFiles/Assembler.dir/util/string_util/string_util.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Assembler.dir/build.make CMakeFiles/Assembler.dir/util/string_util/string_util.cpp.o.provides.build
+.PHONY : CMakeFiles/Assembler.dir/util/string_util/string_util.cpp.o.provides
+
+CMakeFiles/Assembler.dir/util/string_util/string_util.cpp.o.provides.build: CMakeFiles/Assembler.dir/util/string_util/string_util.cpp.o
+
+
 # Object files for target Assembler
 Assembler_OBJECTS = \
 "CMakeFiles/Assembler.dir/main.cpp.o" \
@@ -208,7 +280,10 @@ Assembler_OBJECTS = \
 "CMakeFiles/Assembler.dir/predefined_data_structures/machine_code_COL.cpp.o" \
 "CMakeFiles/Assembler.dir/predefined_data_structures/symbol_table.cpp.o" \
 "CMakeFiles/Assembler.dir/converter_set/abstract_converter.cpp.o" \
-"CMakeFiles/Assembler.dir/assembler.cpp.o"
+"CMakeFiles/Assembler.dir/assembler.cpp.o" \
+"CMakeFiles/Assembler.dir/predefined_data_structures/abstruct_ASM_COL.cpp.o" \
+"CMakeFiles/Assembler.dir/predefined_data_structures/data_def_pseudo_inst_COL.cpp.o" \
+"CMakeFiles/Assembler.dir/util/string_util/string_util.cpp.o"
 
 # External object files for target Assembler
 Assembler_EXTERNAL_OBJECTS =
@@ -219,9 +294,12 @@ Assembler: CMakeFiles/Assembler.dir/predefined_data_structures/machine_code_COL.
 Assembler: CMakeFiles/Assembler.dir/predefined_data_structures/symbol_table.cpp.o
 Assembler: CMakeFiles/Assembler.dir/converter_set/abstract_converter.cpp.o
 Assembler: CMakeFiles/Assembler.dir/assembler.cpp.o
+Assembler: CMakeFiles/Assembler.dir/predefined_data_structures/abstruct_ASM_COL.cpp.o
+Assembler: CMakeFiles/Assembler.dir/predefined_data_structures/data_def_pseudo_inst_COL.cpp.o
+Assembler: CMakeFiles/Assembler.dir/util/string_util/string_util.cpp.o
 Assembler: CMakeFiles/Assembler.dir/build.make
 Assembler: CMakeFiles/Assembler.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/mac/Desktop/computer integrated system design/Assembler/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable Assembler"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/mac/Desktop/computer integrated system design/Assembler/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable Assembler"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Assembler.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -235,6 +313,9 @@ CMakeFiles/Assembler.dir/requires: CMakeFiles/Assembler.dir/predefined_data_stru
 CMakeFiles/Assembler.dir/requires: CMakeFiles/Assembler.dir/predefined_data_structures/symbol_table.cpp.o.requires
 CMakeFiles/Assembler.dir/requires: CMakeFiles/Assembler.dir/converter_set/abstract_converter.cpp.o.requires
 CMakeFiles/Assembler.dir/requires: CMakeFiles/Assembler.dir/assembler.cpp.o.requires
+CMakeFiles/Assembler.dir/requires: CMakeFiles/Assembler.dir/predefined_data_structures/abstruct_ASM_COL.cpp.o.requires
+CMakeFiles/Assembler.dir/requires: CMakeFiles/Assembler.dir/predefined_data_structures/data_def_pseudo_inst_COL.cpp.o.requires
+CMakeFiles/Assembler.dir/requires: CMakeFiles/Assembler.dir/util/string_util/string_util.cpp.o.requires
 
 .PHONY : CMakeFiles/Assembler.dir/requires
 

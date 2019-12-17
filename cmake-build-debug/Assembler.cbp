@@ -100,10 +100,22 @@
 		<Unit filename="/Users/mac/Desktop/computer integrated system design/Assembler/main.cpp">
 			<Option target="Assembler"/>
 		</Unit>
+		<Unit filename="/Users/mac/Desktop/computer integrated system design/Assembler/predefined_data_structures/abstruct_ASM_COL.cpp">
+			<Option target="Assembler"/>
+		</Unit>
+		<Unit filename="/Users/mac/Desktop/computer integrated system design/Assembler/predefined_data_structures/abstruct_ASM_COL.h">
+			<Option target="Assembler"/>
+		</Unit>
 		<Unit filename="/Users/mac/Desktop/computer integrated system design/Assembler/predefined_data_structures/asm_COL.cpp">
 			<Option target="Assembler"/>
 		</Unit>
 		<Unit filename="/Users/mac/Desktop/computer integrated system design/Assembler/predefined_data_structures/asm_COL.h">
+			<Option target="Assembler"/>
+		</Unit>
+		<Unit filename="/Users/mac/Desktop/computer integrated system design/Assembler/predefined_data_structures/data_def_pseudo_inst_COL.cpp">
+			<Option target="Assembler"/>
+		</Unit>
+		<Unit filename="/Users/mac/Desktop/computer integrated system design/Assembler/predefined_data_structures/data_def_pseudo_inst_COL.h">
 			<Option target="Assembler"/>
 		</Unit>
 		<Unit filename="/Users/mac/Desktop/computer integrated system design/Assembler/predefined_data_structures/machine_code_COL.cpp">
@@ -116,6 +128,12 @@
 			<Option target="Assembler"/>
 		</Unit>
 		<Unit filename="/Users/mac/Desktop/computer integrated system design/Assembler/predefined_data_structures/symbol_table.h">
+			<Option target="Assembler"/>
+		</Unit>
+		<Unit filename="/Users/mac/Desktop/computer integrated system design/Assembler/util/string_util/string_util.cpp">
+			<Option target="Assembler"/>
+		</Unit>
+		<Unit filename="/Users/mac/Desktop/computer integrated system design/Assembler/util/string_util/string_util.h">
 			<Option target="Assembler"/>
 		</Unit>
 		<Unit filename="/Users/mac/Desktop/computer integrated system design/Assembler/CMakeLists.txt">
