@@ -7,7 +7,7 @@
 
 #include <string>
 using namespace std;
-/*
+/**
  * MC_COL defines the data structure for the final generate machine code, together with its vitual address.
  */
 class MC_COL{

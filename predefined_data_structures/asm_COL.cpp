@@ -3,8 +3,7 @@
 //
 
 #include "asm_COL.h"
-// TODO: constructor for ASM_COL class
-ASM_COL::ASM_COL() {}
+
 
 const string &ASM_COL::getLabel_name() const {
     return label_name;

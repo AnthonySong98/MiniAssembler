@@ -130,6 +130,9 @@
 		<Unit filename="/Users/mac/Desktop/computer integrated system design/Assembler/predefined_data_structures/symbol_table.h">
 			<Option target="Assembler"/>
 		</Unit>
+		<Unit filename="/Users/mac/Desktop/computer integrated system design/Assembler/util/inst_set.h">
+			<Option target="Assembler"/>
+		</Unit>
 		<Unit filename="/Users/mac/Desktop/computer integrated system design/Assembler/util/string_util/string_util.cpp">
 			<Option target="Assembler"/>
 		</Unit>

@@ -9,14 +9,14 @@
 #include "abstruct_ASM_COL.h"
 
 using namespace std;
-/*
+/**
  * The class is the data structure for each input line of original assembly code.
  */
 class ASM_COL: public ABSTRUCT_ASM_COL{
 public:
     ASM_COL(const string &original_line_of_code, int line_number);
 
-    ASM_COL();
+    ASM_COL():is_label(false), is_second_operand(false), is_third_operand(false){};
 
     bool isIs_label() const;
 
