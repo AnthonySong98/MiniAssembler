@@ -23,3 +23,7 @@ unsigned int SYMBOL_TABLE::getAddress(string _symbol){
     if(this->symbol_table.find(_symbol)!=this->symbol_table.end()) return symbol_table[_symbol];
     else return NULL;
 }
+
+const unordered_map<string, unsigned int> &SYMBOL_TABLE::getSymbol_table() const {
+    return symbol_table;
+}

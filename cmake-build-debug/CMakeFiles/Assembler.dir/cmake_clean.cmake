@@ -8,6 +8,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Assembler.dir/predefined_data_structures/abstruct_ASM_COL.cpp.o"
   "CMakeFiles/Assembler.dir/predefined_data_structures/data_def_pseudo_inst_COL.cpp.o"
   "CMakeFiles/Assembler.dir/util/string_util/string_util.cpp.o"
+  "CMakeFiles/Assembler.dir/predefined_data_structures/coe.cpp.o"
   "Assembler.pdb"
   "Assembler"
 )

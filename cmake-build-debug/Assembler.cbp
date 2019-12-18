@@ -112,6 +112,12 @@
 		<Unit filename="/Users/mac/Desktop/computer integrated system design/Assembler/predefined_data_structures/asm_COL.h">
 			<Option target="Assembler"/>
 		</Unit>
+		<Unit filename="/Users/mac/Desktop/computer integrated system design/Assembler/predefined_data_structures/coe.cpp">
+			<Option target="Assembler"/>
+		</Unit>
+		<Unit filename="/Users/mac/Desktop/computer integrated system design/Assembler/predefined_data_structures/coe.h">
+			<Option target="Assembler"/>
+		</Unit>
 		<Unit filename="/Users/mac/Desktop/computer integrated system design/Assembler/predefined_data_structures/data_def_pseudo_inst_COL.cpp">
 			<Option target="Assembler"/>
 		</Unit>

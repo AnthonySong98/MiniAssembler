@@ -258,6 +258,33 @@ predefined_data_structures/asm_COL.cpp.s:
 	$(MAKE) -f CMakeFiles/Assembler.dir/build.make CMakeFiles/Assembler.dir/predefined_data_structures/asm_COL.cpp.s
 .PHONY : predefined_data_structures/asm_COL.cpp.s
 
+predefined_data_structures/coe.o: predefined_data_structures/coe.cpp.o
+
+.PHONY : predefined_data_structures/coe.o
+
+# target to build an object file
+predefined_data_structures/coe.cpp.o:
+	$(MAKE) -f CMakeFiles/Assembler.dir/build.make CMakeFiles/Assembler.dir/predefined_data_structures/coe.cpp.o
+.PHONY : predefined_data_structures/coe.cpp.o
+
+predefined_data_structures/coe.i: predefined_data_structures/coe.cpp.i
+
+.PHONY : predefined_data_structures/coe.i
+
+# target to preprocess a source file
+predefined_data_structures/coe.cpp.i:
+	$(MAKE) -f CMakeFiles/Assembler.dir/build.make CMakeFiles/Assembler.dir/predefined_data_structures/coe.cpp.i
+.PHONY : predefined_data_structures/coe.cpp.i
+
+predefined_data_structures/coe.s: predefined_data_structures/coe.cpp.s
+
+.PHONY : predefined_data_structures/coe.s
+
+# target to generate assembly for a file
+predefined_data_structures/coe.cpp.s:
+	$(MAKE) -f CMakeFiles/Assembler.dir/build.make CMakeFiles/Assembler.dir/predefined_data_structures/coe.cpp.s
+.PHONY : predefined_data_structures/coe.cpp.s
+
 predefined_data_structures/data_def_pseudo_inst_COL.o: predefined_data_structures/data_def_pseudo_inst_COL.cpp.o
 
 .PHONY : predefined_data_structures/data_def_pseudo_inst_COL.o
@@ -390,6 +417,9 @@ help:
 	@echo "... predefined_data_structures/asm_COL.o"
 	@echo "... predefined_data_structures/asm_COL.i"
 	@echo "... predefined_data_structures/asm_COL.s"
+	@echo "... predefined_data_structures/coe.o"
+	@echo "... predefined_data_structures/coe.i"
+	@echo "... predefined_data_structures/coe.s"
 	@echo "... predefined_data_structures/data_def_pseudo_inst_COL.o"
 	@echo "... predefined_data_structures/data_def_pseudo_inst_COL.i"
 	@echo "... predefined_data_structures/data_def_pseudo_inst_COL.s"

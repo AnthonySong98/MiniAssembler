@@ -30,9 +30,9 @@ string STRING_UTIL::trim(string &s) {
     s.erase(std::find_if(s.rbegin(), s.rend(), [](int ch) {
         return !std::isspace(ch);
     }).base(), s.end());
-    if(s[0]=='\"'&&s[s.size()-1]=='\"'){
-        s = s.substr(1,s.size()-2);
-    }
+//    if(s[0]=='\"'&&s[s.size()-1]=='\"'){
+//        s = s.substr(1,s.size()-2);
+//    }
     return s;
 }
 
@@ -129,6 +129,15 @@ unsigned int STRING_UTIL::getSegStartAddress(string _COL) {
     smatch m;
     if(regex_search(_COL,m,r)){
         return stoi(m[0].str().substr(2,m[0].str().size()-2),0,16);
+    }
+    else{
+        regex r1("[0-9]+");
+        smatch m1;
+        if(regex_search(_COL,m1,r1)){
+            return stoi(m1[0].str(),0,10);
+        } else{
+            return 0;
+        }
     }
 }
 

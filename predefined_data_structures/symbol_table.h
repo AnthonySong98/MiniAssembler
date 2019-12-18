@@ -23,6 +23,8 @@ public:
     // Returns the address associated with the symbol
     unsigned int getAddress(string _symbol);
 
+    const unordered_map<string, unsigned int> &getSymbol_table() const;
+
 private:
     unordered_map<string, unsigned int> symbol_table; // 存储symbol到address的hash table
 
