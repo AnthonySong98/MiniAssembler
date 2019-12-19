@@ -69,3 +69,34 @@ void ASM_COL::setIs_label(bool is_label) {
     ASM_COL::is_label = is_label;
 }
 
+
+void ASM_COL::setOperandByIndex(const string &operand, int num) {
+    switch (num){
+        case 1:{
+            setFirst_operand(operand);
+            break;
+        }
+        case 2:{
+            setSecond_operand(operand);
+            break;
+        }
+        case 3:{
+            setThird_operand(operand);
+            break;
+        }
+    }
+}
+
+const string& ASM_COL::getOperandByIndex(int num) {
+    switch (num){
+        case 1:{
+            return getFirst_operand();
+        }
+        case 2:{
+            return getSecond_operand();
+        }
+        case 3:{
+            return getThird_operand();
+        }
+    }
+}

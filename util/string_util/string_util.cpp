@@ -205,3 +205,17 @@ void STRING_UTIL::parseCodeInst(string _COL, string &label_name, string &inst_na
         split(para_list_str,de,para_list);
     }
 }
+
+bool STRING_UTIL::isLabelOrVariable(string para, string& label) {
+    regex r1("[a-zA-z][a-zA-Z0-9]*");
+    label = "";
+    smatch m1;
+    if(regex_search(para,m1,r1)){
+        if(m1[0].str()[0] == para[0]){
+            label = m1[0];
+            return true;
+        }
+    } else{
+        return false;
+    }
+}

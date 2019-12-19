@@ -74,6 +74,13 @@ public:
      * check 指令名是否存在
      */
     bool containsDenfinedInst(string _COL, string& inst_name);
+
+    /**
+     * 判断是否是label或者variable
+     * @param para
+     * @return
+     */
+    bool isLabelOrVariable(string para, string& label);
 };
 
 #endif //ASSEMBLER_STRING_UTIL_H

@@ -10,6 +10,7 @@ CMakeFiles/Assembler.dir/assembler.cpp.o: .././predefined_data_structures/machin
 CMakeFiles/Assembler.dir/assembler.cpp.o: .././predefined_data_structures/symbol_table.h
 CMakeFiles/Assembler.dir/assembler.cpp.o: ../assembler.cpp
 CMakeFiles/Assembler.dir/assembler.cpp.o: ../assembler.h
+CMakeFiles/Assembler.dir/assembler.cpp.o: ../predefined_data_structures/coe.h
 CMakeFiles/Assembler.dir/assembler.cpp.o: ../util/string_util/string_util.h
 
 CMakeFiles/Assembler.dir/converter_set/abstract_converter.cpp.o: ../converter_set/abstract_converter.cpp
@@ -27,6 +28,7 @@ CMakeFiles/Assembler.dir/main.cpp.o: .././predefined_data_structures/machine_cod
 CMakeFiles/Assembler.dir/main.cpp.o: .././predefined_data_structures/symbol_table.h
 CMakeFiles/Assembler.dir/main.cpp.o: ../assembler.h
 CMakeFiles/Assembler.dir/main.cpp.o: ../main.cpp
+CMakeFiles/Assembler.dir/main.cpp.o: ../predefined_data_structures/coe.h
 CMakeFiles/Assembler.dir/main.cpp.o: ../util/string_util/string_util.h
 
 CMakeFiles/Assembler.dir/predefined_data_structures/abstruct_ASM_COL.cpp.o: ../predefined_data_structures/abstruct_ASM_COL.cpp
@@ -35,6 +37,9 @@ CMakeFiles/Assembler.dir/predefined_data_structures/abstruct_ASM_COL.cpp.o: ../p
 CMakeFiles/Assembler.dir/predefined_data_structures/asm_COL.cpp.o: ../predefined_data_structures/abstruct_ASM_COL.h
 CMakeFiles/Assembler.dir/predefined_data_structures/asm_COL.cpp.o: ../predefined_data_structures/asm_COL.cpp
 CMakeFiles/Assembler.dir/predefined_data_structures/asm_COL.cpp.o: ../predefined_data_structures/asm_COL.h
+
+CMakeFiles/Assembler.dir/predefined_data_structures/coe.cpp.o: ../predefined_data_structures/coe.cpp
+CMakeFiles/Assembler.dir/predefined_data_structures/coe.cpp.o: ../predefined_data_structures/coe.h
 
 CMakeFiles/Assembler.dir/predefined_data_structures/data_def_pseudo_inst_COL.cpp.o: ../predefined_data_structures/abstruct_ASM_COL.h
 CMakeFiles/Assembler.dir/predefined_data_structures/data_def_pseudo_inst_COL.cpp.o: ../predefined_data_structures/data_def_pseudo_inst_COL.cpp

@@ -68,6 +68,16 @@ private:
      */
     unsigned int dataValue2BinaryCode(string _initValue, string _type, COE& data_code);
 
+     /**
+      *
+      * 重定向函数
+      * str 为待替换的参数
+      * @param asm_col
+      * @param str
+      * @param num
+      */
+    void replaceLabelOrVariable(ASM_COL& asm_col, string& str ,int num);
+
 private:
     string input_file_path; // 汇编文件的路径
     string output_file_path; // coe文件的路径

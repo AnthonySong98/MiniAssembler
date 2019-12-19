@@ -73,6 +73,22 @@ unsigned int ASSEMBLER::dataValue2BinaryCode(string _initValue, string _type, CO
 
 }
 
+
+void ASSEMBLER::replaceLabelOrVariable(ASM_COL &asm_col, string &str, int num) {
+    string current = "";
+    if(literal_symbol_table.containsSymbol(str)){
+        current = asm_col.getOperandByIndex(num);
+        current.replace(0,(str).size(),to_string(literal_symbol_table.getAddress(str)));
+        asm_col.setOperandByIndex(current,num);
+    }
+    current = "";
+    if(label_symbol_table.containsSymbol(str)){
+        current = asm_col.getOperandByIndex(num);
+        current.replace(0,(str).size(),to_string(label_symbol_table.getAddress(str)));
+        asm_col.setOperandByIndex(current,num);
+    }
+}
+
 //constructAsmColVector 将读入的汇编语言文件解析
 void ASSEMBLER::constructAsmColVector() {
     std::ifstream input_file(input_file_path);
@@ -194,6 +210,7 @@ void ASSEMBLER::firstPass() {
 // construct the label_symbol_table
     for (int l = 0; l < asm_col_vector.size(); ++l) {
         if(asm_col_vector[l].isIs_label()){
+            // TODO: 当存在宏指令的时候，需要修正加以判断
             label_symbol_table.addEntryToSymbolTable(asm_col_vector[l].getLabel_name(),code_Seg_start_address+4*l);
         }
     }
@@ -201,7 +218,21 @@ void ASSEMBLER::firstPass() {
 
 //TODO: second pass
 void ASSEMBLER::secondPass() {
-
+    for (int i = 0; i < asm_col_vector.size(); ++i) {
+        if(asm_col_vector[i].isIs_label()){
+            asm_col_vector[i].setLabel_name(to_string(label_symbol_table.getAddress(asm_col_vector[i].getLabel_name())));
+        }
+        string label_name = "";
+        if(string_util.isLabelOrVariable(asm_col_vector[i].getFirst_operand(),label_name)){
+            replaceLabelOrVariable(asm_col_vector[i],label_name,1);
+        }
+        if(asm_col_vector[i].isIs_second_operand() && string_util.isLabelOrVariable(asm_col_vector[i].getSecond_operand(),label_name)){
+            replaceLabelOrVariable(asm_col_vector[i],label_name,2);
+        }
+        if(asm_col_vector[i].isIs_third_operand() && string_util.isLabelOrVariable(asm_col_vector[i].getThird_operand(),label_name)){
+            replaceLabelOrVariable(asm_col_vector[i],label_name,3);
+        }
+    }
 }
 
 //TODO: generate machine code

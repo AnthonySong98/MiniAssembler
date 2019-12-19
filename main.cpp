@@ -11,6 +11,7 @@ int main() {
     ASSEMBLER assembler(input_path,output_path);
     assembler.constructAsmColVector();
     assembler.firstPass();
+    assembler.secondPass();
     assembler.generateMachineCode();
     return 0;
 }

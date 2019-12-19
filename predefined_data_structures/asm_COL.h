@@ -50,6 +50,20 @@ public:
 
     void setThird_operand(const string &third_operand);
 
+    /**
+     * Set Operand By Index
+     * @param operand
+     * @param num
+     */
+    void setOperandByIndex(const string& operand, int num);
+
+    /**
+     * Get Operand By Index
+     * @param num
+     * @return
+     */
+    const string & getOperandByIndex(int num);
+
 private:
 
     /* 每行汇编代码的格式如下
