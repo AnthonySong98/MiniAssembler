@@ -13,13 +13,34 @@ str2:
 
  .TEXT 2020# 代码段定义开始
  start:
- addi $t0, $Zero, 0 # 程序的第一条指令必须有一个标号， $t0=0
- l1: lw $v0, buf ($t1) # $v0=000000FF (buf[0])
- l2: addi $t0, $t0, -4 # $t0=$t0+4
- l3:
+ add $v0, $v1, $t3
+ addu $a1, $a0, $t2
+sub $t7,$s2, $s6
+subu $s1, $v0, $t4
+and $t8, $s0, $a2
 
- lw $v1, buf($t0) # $v1=55005500 (buf[4])
-  add $v0, $v0, $v1 # $v0=$v0+$v1=550055FF
-addi $t0, $t0, 4 # $t0=$t0+1
-  sw $v0, buf($t0) # buf[8]=550055FF
-  j start
+mult $a0, $t5
+multu $a5, $t0
+div $s3, $v1
+divu $v1, $s3
+
+mfc0 $t7,$s2,0
+mtc0 $s2,$t7,0
+
+or $a2, $s0, $t1
+xor $t2, $v0, $s1
+nor $a1, $s5, $t3
+slt $v1, $s7, $t2
+sltu $a0, $t1, $v0
+
+sll $s0, $t2, 2
+srl $t7, $v1, 3
+sra $t4, $s5, 4
+
+sllv $t8, $s0, $a2
+srlv $t8, $s0, $a2
+srav $t8, $s0, $a2
+
+
+
+

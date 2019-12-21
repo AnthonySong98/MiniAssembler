@@ -4,6 +4,8 @@
 
 #include "machine_code_COL.h"
 
+MC_COL::MC_COL() {}
+
 MC_COL::MC_COL(const string &machine_code, unsigned int address) : machine_code(machine_code), address(address) {
 
 }

@@ -81,6 +81,54 @@ public:
      * @return
      */
     bool isLabelOrVariable(string para, string& label);
+
+    /**
+     * 提取寄存器名称，并映射到寄存器编号，最后以二进制字符串输出（默认为5位）
+     * @param para
+     * @return
+     */
+    string extractRegName(string para, int num = 5);
+
+
+    /**
+     * 提取立即数
+     * @param para
+     * @param num
+     * @return
+     */
+    string extractImmediate(string para, int num = 16, int type = 1);
+
+    /**
+     * type为0做zero-extend
+     * type为1做signed-extend
+     * @param para
+     * @param type
+     * @return
+     */
+    string getExtended(string para, int type, int num = 16);
+
+
+    /**
+     * (PC)←( (Zero-Extend) address<<2)
+     * @param para
+     * @return
+     */
+    string extractAddress(string para);
+
+    /**
+     * binString2HexString
+     * @param bin_string
+     * @return
+     */
+    string binString2HexString(const string & bin_string);
+
+    /**
+     * 移位指令需要使用
+     * @param para
+     * @param num
+     * @return
+     */
+    string extractShamt(string para,int num = 5);
 };
 
 #endif //ASSEMBLER_STRING_UTIL_H

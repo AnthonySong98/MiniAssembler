@@ -6,7 +6,7 @@
 using namespace std;
 
 int main() {
-    string input_path = "../input_asm_file/test_input.s";
+    string input_path = "../input_asm_file/test_all_inst.s";
     string output_path = "../output_coe_file/";
     ASSEMBLER assembler(input_path,output_path);
     assembler.constructAsmColVector();

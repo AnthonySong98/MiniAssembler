@@ -94,7 +94,7 @@
 		<Unit filename="/Users/mac/Desktop/computer integrated system design/Assembler/converter_set/abstract_converter.h">
 			<Option target="Assembler"/>
 		</Unit>
-		<Unit filename="/Users/mac/Desktop/computer integrated system design/Assembler/converter_set/add_inst_converter.h">
+		<Unit filename="/Users/mac/Desktop/computer integrated system design/Assembler/converter_set/inst_converter.h">
 			<Option target="Assembler"/>
 		</Unit>
 		<Unit filename="/Users/mac/Desktop/computer integrated system design/Assembler/main.cpp">

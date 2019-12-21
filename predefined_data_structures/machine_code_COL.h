@@ -14,6 +14,8 @@ class MC_COL{
 public:
     MC_COL(const string &machine_code, unsigned int address);
 
+    MC_COL();
+
     const string &getMachine_code() const;
 
     void setMachine_code(const string &machine_code);

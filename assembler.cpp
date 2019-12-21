@@ -8,6 +8,7 @@
 #include <iomanip>
 #include <bitset>
 #include "assembler.h"
+#include "./converter_set/inst_converter.h"
 
 using namespace std;
 
@@ -87,6 +88,16 @@ void ASSEMBLER::replaceLabelOrVariable(ASM_COL &asm_col, string &str, int num) {
         current.replace(0,(str).size(),to_string(label_symbol_table.getAddress(str)));
         asm_col.setOperandByIndex(current,num);
     }
+}
+
+void ASSEMBLER::inst2BinaryCode(ASM_COL asm_col, unsigned int &current_address, MC_COL& mc_col) {
+    INST_CONVERTER inst_converter;
+    inst_converter.setAsm_col(asm_col);
+    inst_converter.asm2mc();
+    mc_col = inst_converter.getMc_col();
+    mc_col.setAddress(current_address);
+    current_address = current_address + 4;
+
 }
 
 //constructAsmColVector 将读入的汇编语言文件解析
@@ -216,7 +227,7 @@ void ASSEMBLER::firstPass() {
     }
 }
 
-//TODO: second pass
+// second pass
 void ASSEMBLER::secondPass() {
     for (int i = 0; i < asm_col_vector.size(); ++i) {
         if(asm_col_vector[i].isIs_label()){
@@ -237,6 +248,19 @@ void ASSEMBLER::secondPass() {
 
 //TODO: generate machine code
 void ASSEMBLER::generateMachineCode() {
+    //generate coe for data seg
     data_coe.output2file(output_file_path+"data.coe");
+
+    //generate coe for code seg
+    unsigned int current_address = code_Seg_start_address;
+    std::ofstream output_file(output_file_path+"code.coe");
+    if(output_file.is_open()){
+        for (int i = 0; i < asm_col_vector.size(); ++i) {
+            MC_COL mc_col_current;
+            inst2BinaryCode(asm_col_vector[i],current_address,mc_col_current);
+            output_file<<string_util.binString2HexString(mc_col_current.getMachine_code())<<" : "<<mc_col_current.getAddress()<<endl;
+        }
+    }
+
 
 }

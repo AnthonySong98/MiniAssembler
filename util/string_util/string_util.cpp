@@ -6,7 +6,10 @@
 #include "../inst_set.h"
 #include <regex>
 #include <iostream>
-
+#include <iomanip>
+#include <sstream>
+#include <bitset>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -171,15 +174,14 @@ void STRING_UTIL::parseDataPseudoInst(string _COL, string &variable_name, string
     } else{
         variable_type = "";
     }
-
-
 }
 
 bool STRING_UTIL::containsDenfinedInst(string _COL, string &inst_name) {
     inst_name = "";
     int i;
     for (i = 0; i < INST_SET.size(); ++i) {
-        if(_COL.find(INST_SET[i]) != std::string::npos && _COL[_COL.find(INST_SET[i])+INST_SET[i].size()]==' ' ){
+        if(_COL.find(INST_SET[i]) != std::string::npos && _COL[_COL.find(INST_SET[i])+INST_SET[i].size()]==' '
+                &&(_COL.find(INST_SET[i]) == 0 || (_COL.find(INST_SET[i]) > 0 && _COL[_COL.find(INST_SET[i])-1] == ' '))){
             inst_name = INST_SET[i];
             break;
         }
@@ -217,5 +219,85 @@ bool STRING_UTIL::isLabelOrVariable(string para, string& label) {
         }
     } else{
         return false;
+    }
+}
+
+string STRING_UTIL::extractRegName(string para, int num) {
+    regex r("\\$[a-zA-z][a-zA-Z0-9]*");
+    smatch m;
+    if(regex_search(para,m,r)){
+        string RegName = m[0].str();
+        std::bitset<5> binary_str(RegMap.find(RegName).operator->()->second);
+        return binary_str.to_string();
+    }
+}
+
+string STRING_UTIL::getExtended(string para, int type, int num) {
+    if(type == 1){
+        regex r("[-]?[0-9]+");
+        smatch m;
+        if(regex_search(para,m,r)){
+            string immediate = m[0].str();
+            std::bitset<16> binary_str(strtol(immediate.c_str(), NULL,10));
+            return binary_str.to_string();
+        }
+    }
+    else if (type == 0){
+        regex r("[0-9]+");
+        smatch m;
+        if(regex_search(para,m,r)){
+            string immediate = m[0].str();
+            std::bitset<16> binary_str(strtol(immediate.c_str(), NULL,10));
+            return binary_str.to_string();
+        }
+    }
+    else{
+        cerr<<"ERROR raised by getExtended!\n";
+    }
+}
+
+//默认为26位伪地址
+string STRING_UTIL::extractAddress(string para) {
+    regex r("[0-9]+");
+    smatch m;
+    if(regex_search(para,m,r)){
+        string immediate = m[0].str();
+        std::bitset<28> binary_str(strtol(immediate.c_str(), NULL,10));
+        return binary_str.to_string().substr(0,26);
+    }
+}
+
+//需要考虑负数
+string STRING_UTIL::extractImmediate(string para, int num, int type) {
+    return getExtended(para,type,16);
+}
+
+
+string STRING_UTIL::binString2HexString(const string &bin_string) {
+    string out;
+    for(uint i = 0; i < bin_string.size(); i += 4){
+        int8_t n = 0;
+        for(uint j = i; j < i + 4; ++j){
+            n <<= 1;
+            if(bin_string[j] == '1')
+                n |= 1;
+        }
+
+        if(n<=9)
+            out.push_back('0' + n);
+        else
+            out.push_back('A' + n - 10);
+    }
+
+    return out;
+}
+
+string STRING_UTIL::extractShamt(string para, int num) {
+    regex r("[0-9]+");
+    smatch m;
+    if(regex_search(para,m,r)){
+        string shamt = m[0].str();
+        std::bitset<5> binary_str(strtol(shamt.c_str(), NULL,10));
+        return binary_str.to_string();
     }
 }

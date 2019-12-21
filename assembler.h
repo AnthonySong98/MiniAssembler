@@ -14,7 +14,7 @@
 #include "./predefined_data_structures/machine_code_COL.h"
 #include "./predefined_data_structures/symbol_table.h"
 
-#include "./converter_set/add_inst_converter.h"
+#include "converter_set/inst_converter.h"
 #include "util/string_util/string_util.h"
 #include "predefined_data_structures/coe.h"
 
@@ -77,6 +77,14 @@ private:
       * @param num
       */
     void replaceLabelOrVariable(ASM_COL& asm_col, string& str ,int num);
+
+    /**
+     * 将重定向后的代码段翻译成二进制机器码
+     * @param asm_col
+     * @param current_address
+     * @return
+     */
+    void inst2BinaryCode(ASM_COL asm_col,unsigned int& current_address, MC_COL& mc_col);
 
 private:
     string input_file_path; // 汇编文件的路径
