@@ -171,17 +171,20 @@ void ASSEMBLER::constructAsmColVector() {
                     asm_col.setLabel_name(labelName);
                     asm_col.setIs_label(true);
                     setInstNameAndOperandList(asm_col,instName,paraList);
+                    asm_col.setOriginal_line_of_code(line_of_code);
                     asm_col_vector.push_back(asm_col);
                 }
                 else{
                     if(asm_col_vector.size() != 0){
                         if(asm_col_vector[asm_col_vector.size()-1].getOp_name().empty()){
+                            asm_col_vector[asm_col_vector.size()-1].setOriginal_line_of_code(asm_col_vector[asm_col_vector.size()-1].getOriginal_line_of_code()+line_of_code);
                             asm_col_vector[asm_col_vector.size()-1].setOp_name(labelName);
                             asm_col_vector[asm_col_vector.size()-1].setIs_label(true);
                             setInstNameAndOperandList(asm_col_vector[asm_col_vector.size()-1],instName,paraList);
                         }
                         else{
                             ASM_COL asm_col;
+                            asm_col.setOriginal_line_of_code(line_of_code);
                             asm_col.setIs_label(false);
                             setInstNameAndOperandList(asm_col,instName,paraList);
                             asm_col_vector.push_back(asm_col);
@@ -258,7 +261,8 @@ void ASSEMBLER::generateMachineCode() {
         for (int i = 0; i < asm_col_vector.size(); ++i) {
             MC_COL mc_col_current;
             inst2BinaryCode(asm_col_vector[i],current_address,mc_col_current);
-            output_file<<string_util.binString2HexString(mc_col_current.getMachine_code())<<" : "<<mc_col_current.getAddress()<<endl;
+            output_file<<string_util.binString2HexString(mc_col_current.getMachine_code())<<" : "<<mc_col_current.getAddress()<<" : "
+                        <<asm_col_vector[i].getOriginal_line_of_code()<<endl;
         }
     }
 

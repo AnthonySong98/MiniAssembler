@@ -23,8 +23,7 @@ mult $a0, $t5
 multu $a5, $t0
 div $s3, $v1
 divu $v1, $s3
-
-mfc0 $t7,$s2,0
+label1: mfc0 $t7,$s2,0
 mtc0 $s2,$t7,0
 
 or $a2, $s0, $t1
@@ -40,6 +39,7 @@ sra $t4, $s5, 4
 sllv $t8, $s0, $a2
 srlv $t8, $s0, $a2
 srav $t8, $s0, $a2
+
 
 
 
