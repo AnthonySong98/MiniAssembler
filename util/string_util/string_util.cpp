@@ -110,14 +110,14 @@ void STRING_UTIL::deleteComment(string& _COL) {
 }
 
 bool STRING_UTIL::isPseudoInst(string _COL,string &_type) {
-    regex r1("\\s*.data\\s+");
+    regex r1("\\s*.data\\s*");
     smatch m1;
     if(regex_search(_COL,m1,r1)){
         _type = DATA_SEG_DEF_PSEUDO_INST_TYPE;
         return true;
     }
 
-    regex r2("\\s*.text\\s+");
+    regex r2("\\s*.text\\s*");
     smatch m2;
     if(regex_search(_COL,m2,r2)){
         _type = CODE_SEG_DEF_PSEUDO_INST_TYPE;
