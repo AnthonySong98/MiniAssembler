@@ -269,6 +269,16 @@ string STRING_UTIL::extractAddress(string para) {
 
 //需要考虑负数
 string STRING_UTIL::extractImmediate(string para, int num, int type) {
+    //if hex
+    if(para.size()>2&&para[0]=='0'&&para[1]=='x'){
+        regex r("0x[0-9a-f]+");
+        smatch m;
+        if(regex_search(para,m,r)){
+            string immediate = m[0].str();
+            std::bitset<16> binary_str(strtol(immediate.c_str(), NULL,16));
+            return binary_str.to_string();
+        }
+    }
     return getExtended(para,type,16);
 }
 
