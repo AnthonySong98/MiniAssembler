@@ -311,3 +311,24 @@ string STRING_UTIL::extractShamt(string para, int num) {
         return binary_str.to_string();
     }
 }
+
+void STRING_UTIL::deleteTab(string &_COL) {
+    int flag = 1;// 判断是否在string内部
+    string newline="";
+    for(int i = 0 ;  i < _COL.size(); i++){
+        if(flag == 1){
+            if(_COL[i] != '\t'){
+                newline = newline + _COL[i];
+                if(_COL[i] == '\"'){
+                    flag = 0;
+                }
+            }
+        } else{
+            newline = newline + _COL[i];
+            if(_COL[i] == '\"'){
+                flag = 1;
+            }
+        }
+    }
+    _COL = newline;
+}

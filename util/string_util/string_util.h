@@ -39,6 +39,12 @@ public:
     void deleteComment(string &_COL);
 
     /**
+     * delete tab
+     * @param _COL
+     */
+    void deleteTab(string &_COL);
+
+    /**
      * 判断是否是伪指令, 如果是则返回伪指令的类型
      * 只判断.data和.text
      */

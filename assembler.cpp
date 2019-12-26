@@ -115,6 +115,9 @@ void ASSEMBLER::constructAsmColVector() {
             //delete comment
             string_util.deleteComment(line_of_code);
 
+            //delete tab
+            string_util.deleteTab(line_of_code);
+
             if(string_util.isEmptyLine(line_of_code)){ continue;}
             // check扫描到哪个段了
             if(data_seg_flag == 1 || code_seg_flag == 1){

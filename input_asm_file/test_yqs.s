@@ -1,72 +1,152 @@
-.data  0x0000              		        # 数据定义的首地址
-   buf:   .word  0x00000055, 0x000000AA	# 定义数据
-.text 0x0000						        # 代码段定义开始
-start:
-ori $at,$zero,1       #寄存器初始化
-ori $v0,$zero,2
-ori $v1,$zero,3
-ori $a0,$zero,4
-ori $a1,$zero,5
-ori $a2,$zero,6
-ori $a3,$zero,7
-ori $t0,$zero,8
-ori $t1,$zero,9
-ori $t2,$zero,10
-ori $t3,$zero,11
-ori $t4,$zero,12
-ori $t5,$zero,13
-ori $t6,$zero,14
-ori $t7,$zero,15
-ori $s0,$zero,16
-ori $s1,$zero,17
-ori $s2,$zero,18
-ori $s3,$zero,19
-ori $s4,$zero,20
-ori $s5,$zero,21
-ori $s6,$zero,22
-ori $s7,$zero,23
-ori $t8,$zero,24
-ori $t9,$zero,25
-ori $i0,$zero,26
-ori $i1,$zero,27
-ori $s9,$zero,28
-ori $sp,$zero,29
-ori $s8,$zero,30
-ori $ra,$zero,31
-ori $v0,$zero,0x55       		# lw $v0,buf($zero)
-ori $a0,$zero,4
-ori $a1,$zero,5
-lw $v1,buf($a0)			# buf+4
-add $at,$v0,$v1
-sw $at,8($zero)
-subu $a0,$v1,$v0
-slt $a0,$v0,$at
-and $at,$v1,$a3
-or $a2,$v0,$at
-xor $a3,$v0,$v1
-nor $a2,$a1,$at
-lop:
-beq $v1,$v0,lop
-lop1:
-sub $v0,$v0,$a1
-bne $a1,$v0,lop1
-beq $at,$at,lop2
-nop
+.data
+	key: .word 0
 
-lop2:
-jal subp
-j next
-subp:
-jr $ra
-next:
-addi $v0,$zero,0x99
-ori $v1,$zero,0x77
-sll $v1,$v0,4
-srl $v1,$v0,4
-srlv $v1,$v0,$at
-lui $a2,0x9988
-sra $a3,$a2,4
-addi $v0,$zero,0
-addi $v1,$zero,2
-sub  $at,$v0,$v1
-j start
+.text
+
+keyread:
+	addi $t0, $zero, 10
+	sw $t0, key($zero)
+	nop
+	jr $ra
+	nop
+
+print:
+	add $t0, $a0, $zero
+	sw $t0, 0xff00($zero)
+	nop
+	jr $ra
+	nop
+
+delay:
+	addi $sp, $sp, -4
+	sw $s0, 0($sp)
+	addi $t0, $zero, 3000000
+	add $s0, $t0, $zero
+L1:
+	addi $t0, $zero, 0
+	add $t1, $t0, $zero
+	add $t0, $s0, $zero
+	slt $t0, $t1, $t0
+	beq $t0, $zero, L2
+	nop
+	addi $t0, $zero, 1
+	add $t1, $t0, $zero
+	add $t0, $s0, $zero
+	sub $t0, $t0, $t1
+	add $s0, $t0, $zero
+	nop
+	j L1
+	nop
+L2:
+	lw $s0, 0($sp)
+	addi $sp, $sp, 4
+	nop
+	jr $ra
+	nop
+
+fib:
+	addi $sp, $sp, -16
+	sw $s3, 12($sp)
+	sw $s2, 8($sp)
+	sw $s1, 4($sp)
+	sw $s0, 0($sp)
+	addi $t0, $zero, 2
+	add $t1, $t0, $zero
+	add $t0, $a0, $zero
+	slt $t0, $t0, $t1
+	beq $t0, $zero, L3
+	nop
+	add $t0, $a0, $zero
+	add $v0, $t0, $zero
+	lw $s0, 0($sp)
+	lw $s1, 4($sp)
+	lw $s2, 8($sp)
+	lw $s3, 12($sp)
+	addi $sp, $sp, 16
+	nop
+	jr $ra
+	nop
+L3:
+	addi $t0, $zero, 0
+	add $s0, $t0, $zero
+	addi $t0, $zero, 1
+	add $s1, $t0, $zero
+	addi $t0, $zero, 0
+	add $s2, $t0, $zero
+	addi $t0, $zero, 2
+	add $s3, $t0, $zero
+L4:
+	add $t0, $a0, $zero
+	add $t2, $t0, $zero
+	add $t0, $s3, $zero
+	add $t1, $t0, $zero
+	addi $t0, $zero, 1
+	beq $t1, $t2, L6
+	nop
+	slt $t0, $t1, $t2
+L6:
+	beq $t0, $zero, L5
+	nop
+	add $t0, $s1, $zero
+	add $t1, $t0, $zero
+	add $t0, $s0, $zero
+	add $t0, $t0, $t1
+	add $s2, $t0, $zero
+	add $t0, $s1, $zero
+	add $s0, $t0, $zero
+	add $t0, $s2, $zero
+	add $s1, $t0, $zero
+	addi $t0, $zero, 1
+	add $t1, $t0, $zero
+	add $t0, $s3, $zero
+	add $t0, $t0, $t1
+	add $s3, $t0, $zero
+	nop
+	j L4
+	nop
+L5:
+	add $t0, $s2, $zero
+	add $v0, $t0, $zero
+	lw $s0, 0($sp)
+	lw $s1, 4($sp)
+	lw $s2, 8($sp)
+	lw $s3, 12($sp)
+	addi $sp, $sp, 16
+	nop
+	jr $ra
+	nop
+
+main:
+	addi $t0, $zero, 5
+	add $s0, $t0, $zero
+L7:
+	addi $t0, $zero, 1
+	beq $t0, $zero, L8
+	nop
+	addi $sp, $sp, -8
+	sw $ra, 4($sp)
+	sw $t9, 0($sp)
+	add $t0, $s1, $zero
+	add $a0, $t0, $zero
+	nop
+	jal print
+	nop
+	lw $t9, 0($sp)
+	lw $ra, 4($sp)
+	addi $sp, $sp, 8
+	addi $sp, $sp, -8
+	sw $ra, 4($sp)
+	sw $t9, 0($sp)
+	nop
+	jal delay
+	nop
+	lw $t9, 0($sp)
+	lw $ra, 4($sp)
+	addi $sp, $sp, 8
+	nop
+	j L7
+	nop
+L8:
+	nop
+	jr $ra
+	nop
