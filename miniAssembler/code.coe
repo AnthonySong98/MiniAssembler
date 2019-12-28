@@ -1,0 +1,112 @@
+2008000A : 0 : keyread:addi $t0, $zero, 10
+AC080000 : 4 : sw $t0, key($zero)
+07C1F012 : 8 : nopjr $ra
+ : 12 : nop
+00804020 : 16 : print:add $t0, $a0, $zero
+AC080050 : 20 : sw $t0, 0xff00($zero)
+07C1F012 : 24 : nopjr $ra
+ : 28 : nop
+23BDFFFC : 32 : delay:addi $sp, $sp, -4
+AFB00000 : 36 : sw $s0, 0($sp)
+2008C6C0 : 40 : addi $t0, $zero, 3000000
+01008020 : 44 : add $s0, $t0, $zero
+20080000 : 48 : l1:addi $t0, $zero, 0
+01004820 : 52 : add $t1, $t0, $zero
+02004020 : 56 : add $t0, $s0, $zero
+0128402A : 60 : slt $t0, $t1, $t0
+11000060 : 64 : beq $t0, $zero, l2
+20080001 : 68 : nopaddi $t0, $zero, 1
+01004820 : 72 : add $t1, $t0, $zero
+02004020 : 76 : add $t0, $s0, $zero
+01094022 : 80 : sub $t0, $t0, $t1
+01008020 : 84 : add $s0, $t0, $zero
+0800000C : 88 : nopj l1
+ : 92 : nop
+8FB00050 : 96 : l2:lw $s0, 0($sp)
+23BD0004 : 100 : addi $sp, $sp, 4
+07C1F012 : 104 : nopjr $ra
+ : 108 : nop
+23BDFFF0 : 112 : fib:addi $sp, $sp, -16
+AFB3000C : 116 : sw $s3, 12($sp)
+AFB20008 : 120 : sw $s2, 8($sp)
+AFB10004 : 124 : sw $s1, 4($sp)
+AFB00000 : 128 : sw $s0, 0($sp)
+20080002 : 132 : addi $t0, $zero, 2
+01004820 : 136 : add $t1, $t0, $zero
+00804020 : 140 : add $t0, $a0, $zero
+0109402A : 144 : slt $t0, $t0, $t1
+110000BC : 148 : beq $t0, $zero, l3
+00804020 : 152 : nopadd $t0, $a0, $zero
+01001020 : 156 : add $v0, $t0, $zero
+8FB00050 : 160 : lw $s0, 0($sp)
+8FB10054 : 164 : lw $s1, 4($sp)
+8FB20058 : 168 : lw $s2, 8($sp)
+8FB3032C : 172 : lw $s3, 12($sp)
+23BD0010 : 176 : addi $sp, $sp, 16
+07C1F012 : 180 : nopjr $ra
+ : 184 : nop
+20080000 : 188 : l3:addi $t0, $zero, 0
+01008020 : 192 : add $s0, $t0, $zero
+20080001 : 196 : addi $t0, $zero, 1
+01008820 : 200 : add $s1, $t0, $zero
+20080000 : 204 : addi $t0, $zero, 0
+01009020 : 208 : add $s2, $t0, $zero
+20080002 : 212 : addi $t0, $zero, 2
+01009820 : 216 : add $s3, $t0, $zero
+00804020 : 220 : l4:add $t0, $a0, $zero
+01005020 : 224 : add $t2, $t0, $zero
+02604020 : 228 : add $t0, $s3, $zero
+01004820 : 232 : add $t1, $t0, $zero
+20080001 : 236 : addi $t0, $zero, 1
+112A00F8 : 240 : beq $t1, $t2, l6
+012A402A : 244 : nopslt $t0, $t1, $t2
+1100013C : 248 : l6:beq $t0, $zero, l5
+02204020 : 252 : nopadd $t0, $s1, $zero
+01004820 : 256 : add $t1, $t0, $zero
+02004020 : 260 : add $t0, $s0, $zero
+01094020 : 264 : add $t0, $t0, $t1
+01009020 : 268 : add $s2, $t0, $zero
+02204020 : 272 : add $t0, $s1, $zero
+01008020 : 276 : add $s0, $t0, $zero
+02404020 : 280 : add $t0, $s2, $zero
+01008820 : 284 : add $s1, $t0, $zero
+20080001 : 288 : addi $t0, $zero, 1
+01004820 : 292 : add $t1, $t0, $zero
+02604020 : 296 : add $t0, $s3, $zero
+01094020 : 300 : add $t0, $t0, $t1
+01009820 : 304 : add $s3, $t0, $zero
+08000037 : 308 : nopj l4
+ : 312 : nop
+02404020 : 316 : l5:add $t0, $s2, $zero
+01001020 : 320 : add $v0, $t0, $zero
+8FB00050 : 324 : lw $s0, 0($sp)
+8FB10054 : 328 : lw $s1, 4($sp)
+8FB20058 : 332 : lw $s2, 8($sp)
+8FB3032C : 336 : lw $s3, 12($sp)
+23BD0010 : 340 : addi $sp, $sp, 16
+07C1F012 : 344 : nopjr $ra
+ : 348 : nop
+20080005 : 352 : main:addi $t0, $zero, 5
+01008020 : 356 : add $s0, $t0, $zero
+20080001 : 360 : l7:addi $t0, $zero, 1
+110001B8 : 364 : beq $t0, $zero, l8
+23BDFFF8 : 368 : nopaddi $sp, $sp, -8
+AFBF0004 : 372 : sw $ra, 4($sp)
+AFB90000 : 376 : sw $t9, 0($sp)
+02204020 : 380 : add $t0, $s1, $zero
+01002020 : 384 : add $a0, $t0, $zero
+0C000004 : 388 : nopjal print
+8FB90050 : 392 : noplw $t9, 0($sp)
+8FBF0054 : 396 : lw $ra, 4($sp)
+23BD0008 : 400 : addi $sp, $sp, 8
+23BDFFF8 : 404 : addi $sp, $sp, -8
+AFBF0004 : 408 : sw $ra, 4($sp)
+AFB90000 : 412 : sw $t9, 0($sp)
+0C000008 : 416 : nopjal delay
+8FB90050 : 420 : noplw $t9, 0($sp)
+8FBF0054 : 424 : lw $ra, 4($sp)
+23BD0008 : 428 : addi $sp, $sp, 8
+0800005A : 432 : nopj l7
+ : 436 : nop
+07C1F012 : 440 : l8:nopjr $ra
+ : 444 : nop
