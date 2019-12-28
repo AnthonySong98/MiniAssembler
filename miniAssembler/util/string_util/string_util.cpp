@@ -223,12 +223,17 @@ bool STRING_UTIL::isLabelOrVariable(string para, string& label) {
 }
 
 string STRING_UTIL::extractRegName(string para, int num) {
-    regex r("\\$[a-zA-z][a-zA-Z0-9]*");
+    regex r("\\$[a-zA-z0-9][a-zA-Z0-9]*");
     smatch m;
     if(regex_search(para,m,r)){
         string RegName = m[0].str();
-        std::bitset<5> binary_str(RegMap.find(RegName).operator->()->second);
-        return binary_str.to_string();
+        if(RegName.size()>1 && isdigit(RegName[1])){
+            std::bitset<5> binary_str(stoi(RegName.substr(1,RegName.size()-1), nullptr,10));
+            return binary_str.to_string();
+        } else{
+            std::bitset<5> binary_str(RegMap.find(RegName).operator->()->second);
+            return binary_str.to_string();
+        }
     }
 }
 
