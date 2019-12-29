@@ -45,6 +45,13 @@ public:
     void deleteTab(string &_COL);
 
     /**
+     * 判断是否是数字，如果是，则判断是10进制还是16进制
+     * @param para
+     * @return
+     */
+    bool isNumber(string para, int& base);
+
+    /**
      * 判断是否是伪指令, 如果是则返回伪指令的类型
      * 只判断.data和.text
      */
@@ -135,6 +142,19 @@ public:
      * @return
      */
     string extractShamt(string para,int num = 5);
+
+
+    /**
+     * 跳转指令 提取offset
+     * 当type为0 表明para已经是立即数
+     * 当type为1 表明para是个label
+     * @param para
+     * @param current_address
+     * @param next_address
+     * @param type
+     * @return
+     */
+    string extractOffset(string para, unsigned int current_address = 0, unsigned int next_address = 0,int type = 0);
 };
 
 #endif //ASSEMBLER_STRING_UTIL_H

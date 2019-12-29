@@ -103,6 +103,8 @@ const string SLTI_INST = "slti";
 const string SLTIU_INST = "sltiu";
 const string J_INST = "j";
 const string JAL_INST = "jal";
+const string NOP_INST = "nop";
+
 
 
 const std::vector<std::string> INST_SET{
@@ -162,6 +164,7 @@ const std::vector<std::string> INST_SET{
     SLTI_INST,
     SLTIU_INST,
     J_INST,
-    JAL_INST
+    JAL_INST,
+    NOP_INST
     };
 #endif //ASSEMBLER_INST_SET_H

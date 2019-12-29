@@ -50,6 +50,10 @@ public:
 
     void setThird_operand(const string &third_operand);
 
+    unsigned int getAddress() const;
+
+    void setAddress(unsigned int address);
+
     /**
      * Set Operand By Index
      * @param operand
@@ -82,6 +86,8 @@ private:
 
     bool is_third_operand; //第三个操作数有无
     string third_operand;// 第三个操作数
+
+    unsigned int address;
 
 };
 

@@ -26,6 +26,10 @@ public:
 
     void output2file(string filepath);
 
+    unsigned int getStart_address() const;
+
+    void setStart_address(unsigned int start_address);
+
 private:
     /**
      * 倒入栈,从后往前注入（小端存储）
@@ -35,6 +39,7 @@ private:
 private:
     string coe_string;
     int current_offset;
+    unsigned int start_address;
 };
 
 #endif //ASSEMBLER_COE_H

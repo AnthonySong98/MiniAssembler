@@ -180,8 +180,10 @@ bool STRING_UTIL::containsDenfinedInst(string _COL, string &inst_name) {
     inst_name = "";
     int i;
     for (i = 0; i < INST_SET.size(); ++i) {
-        if(_COL.find(INST_SET[i]) != std::string::npos && _COL[_COL.find(INST_SET[i])+INST_SET[i].size()]==' '
-                &&(_COL.find(INST_SET[i]) == 0 || (_COL.find(INST_SET[i]) > 0 && _COL[_COL.find(INST_SET[i])-1] == ' '))){
+        if(_COL.find(INST_SET[i]) != std::string::npos &&
+           ((_COL.find(INST_SET[i])+INST_SET[i].size() >= _COL.size() || _COL[_COL.find(INST_SET[i])+INST_SET[i].size()]==' ' )
+            &&((_COL.find(INST_SET[i]) == 0) || _COL[_COL.find(INST_SET[i])-1] == ' ' ))
+            ){
             inst_name = INST_SET[i];
             break;
         }
@@ -328,6 +330,9 @@ void STRING_UTIL::deleteTab(string &_COL) {
                     flag = 0;
                 }
             }
+            else{
+                newline = newline + " ";
+            }
         } else{
             newline = newline + _COL[i];
             if(_COL[i] == '\"'){
@@ -336,4 +341,67 @@ void STRING_UTIL::deleteTab(string &_COL) {
         }
     }
     _COL = newline;
+}
+
+bool STRING_UTIL::isNumber(string para, int& base) {
+    regex r1("0x[0-9a-f]+");
+    regex r2("[-]?[0-9]+");
+    regex r3("[a-zA-Z][a-zA-Z0-9]*");
+    smatch m;
+    string immediate;
+    if(para.size()>2 && para[0]=='0' && para[1]=='x'){
+        if(regex_search(para,m,r1)){
+            immediate = m[0].str();
+            if(immediate == para){
+                base = 16;
+                return true;
+            }
+        }
+    }
+    else if(para.size()>1 && isdigit(para[0])){
+        if(regex_search(para,m,r2)){
+            immediate = m[0].str();
+            if(immediate == para){
+                base = 10;
+                return true;
+            }
+        }
+    }
+    else{
+        if(regex_search(para,m,r3)){
+            base = 0;
+            return false;
+        }
+    }
+}
+
+string STRING_UTIL::extractOffset(string para, unsigned int current_address, unsigned int next_address, int type) {
+    if(type == 0){
+        regex r1("0x[0-9a-f]+");
+        smatch m1;
+        if(regex_search(para,m1,r1)){
+            unsigned long temp = stoul(m1[0].str(), nullptr,16);
+            para.replace(para.find(m1[0].str()),m1[0].str().size(),to_string(temp));
+        }
+
+        regex r2("[-]?[0-9]+");
+        smatch m2;
+        if(regex_search(para,m2,r2)){
+            string immediate = m2[0].str();
+            if(strtol(immediate.c_str(), NULL,10) % 4 == 0){
+                std::bitset<16> binary_str(strtol(immediate.c_str(), NULL,10) / 4);
+                return binary_str.to_string();
+            }
+            else{
+                cerr<<"jump to invalid address!\n";
+            }
+        }
+        return nullptr;
+    }
+    if(type == 1){
+        if((next_address - current_address) % 4 == 0){
+            std::bitset<16> binary_str( (next_address - current_address) / 4 - 1);
+            return binary_str.to_string();
+        }
+    }
 }

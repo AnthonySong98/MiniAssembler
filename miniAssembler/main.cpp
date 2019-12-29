@@ -11,7 +11,7 @@ int main(int argc, char* argv[]) {
 //        return 0;
 //    }
 
-    string input_path = "../input_asm_file/test_yqs.s";
+    string input_path = "../input_asm_file/yys.s";
     string output_path = "../";
     ASSEMBLER assembler(input_path,output_path);
     assembler.constructAsmColVector();

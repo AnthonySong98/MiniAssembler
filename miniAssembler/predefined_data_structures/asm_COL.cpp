@@ -100,3 +100,11 @@ const string& ASM_COL::getOperandByIndex(int num) {
         }
     }
 }
+
+unsigned int ASM_COL::getAddress() const {
+    return address;
+}
+
+void ASM_COL::setAddress(unsigned int address) {
+    ASM_COL::address = address;
+}

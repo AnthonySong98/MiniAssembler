@@ -91,7 +91,8 @@ void ASSEMBLER::replaceLabelOrVariable(ASM_COL &asm_col, string &str, int num) {
 }
 
 void ASSEMBLER::inst2BinaryCode(ASM_COL asm_col, unsigned int &current_address, MC_COL& mc_col) {
-    INST_CONVERTER inst_converter;
+    //INST_CONVERTER inst_converter;
+    asm_col.setAddress(current_address);
     inst_converter.setAsm_col(asm_col);
     inst_converter.asm2mc();
     mc_col = inst_converter.getMc_col();
@@ -244,29 +245,46 @@ void ASSEMBLER::secondPass() {
             replaceLabelOrVariable(asm_col_vector[i],label_name,1);
         }
         if(asm_col_vector[i].isIs_second_operand() && string_util.isLabelOrVariable(asm_col_vector[i].getSecond_operand(),label_name)){
-            replaceLabelOrVariable(asm_col_vector[i],label_name,2);
+            if(asm_col_vector[i].getOp_name() != BGEZ_INST && asm_col_vector[i].getOp_name() != BGTZ_INST && asm_col_vector[i].getOp_name() != BLEZ_INST &&
+               asm_col_vector[i].getOp_name() != BLTZ_INST && asm_col_vector[i].getOp_name() != BGEZAL_INST && asm_col_vector[i].getOp_name() != BLTZAL_INST)
+                replaceLabelOrVariable(asm_col_vector[i],label_name,2);
         }
         if(asm_col_vector[i].isIs_third_operand() && string_util.isLabelOrVariable(asm_col_vector[i].getThird_operand(),label_name)){
-            replaceLabelOrVariable(asm_col_vector[i],label_name,3);
+            if(asm_col_vector[i].getOp_name() != BNE_INST && asm_col_vector[i].getOp_name() != BEQ_INST)
+                replaceLabelOrVariable(asm_col_vector[i],label_name,3);
         }
     }
+    // set two symbol tables and prepare for generating machine code
+    inst_converter.setLabel_symbol_table(label_symbol_table);
+    inst_converter.setLiteral_symbol_table(literal_symbol_table);
 }
 
 //TODO: generate machine code
 void ASSEMBLER::generateMachineCode() {
     //generate coe for data seg
-    data_coe.output2file(output_file_path+"data.coe");
+    data_coe.setStart_address(data_seg_start_address);
+    data_coe.output2file(output_file_path);
 
     //generate coe for code seg
     unsigned int current_address = code_Seg_start_address;
-    std::ofstream output_file(output_file_path+"code.coe");
+    std::ofstream output_file(output_file_path+"prgmip32.coe");
     if(output_file.is_open()){
-        for (int i = 0; i < asm_col_vector.size(); ++i) {
-            MC_COL mc_col_current;
-            inst2BinaryCode(asm_col_vector[i],current_address,mc_col_current);
-            output_file<<string_util.binString2HexString(mc_col_current.getMachine_code())<<" : "<<mc_col_current.getAddress()<<" : "
-                        <<asm_col_vector[i].getOriginal_line_of_code()<<endl;
+        if(code_Seg_start_address % 4 == 0 ){
+            //fill the blanks as 0 until the start address
+            for(int j = 0 ; j <  code_Seg_start_address / 4; j++){
+                output_file<<"00000000"<<endl;
+            }
+
+            for (int i = 0; i < asm_col_vector.size(); ++i) {
+                MC_COL mc_col_current;
+                inst2BinaryCode(asm_col_vector[i],current_address,mc_col_current);
+                output_file<<string_util.binString2HexString(mc_col_current.getMachine_code())<<" : "<<mc_col_current.getAddress()<<" : "
+                           <<asm_col_vector[i].getOriginal_line_of_code()<<endl;
+            }
+        }else{
+            cerr<<"Invalid start address for code segment!\n";
         }
+
     }
 
 

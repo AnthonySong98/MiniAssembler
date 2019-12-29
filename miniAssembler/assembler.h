@@ -104,8 +104,7 @@ private:
     SYMBOL_TABLE literal_symbol_table; // literal symbol table
     SYMBOL_TABLE label_symbol_table; // label symbol table
 
-    //below are instruction converters
-    //ADD_INS_CONVERTER add_ins_converter;
+    INST_CONVERTER inst_converter;
 
     //helper Utils
     STRING_UTIL string_util;
